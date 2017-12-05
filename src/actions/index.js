@@ -1,4 +1,6 @@
 let nextTodoId = 0
+let number = 0
+
 export const addTodo = text => {
   return {
     type: 'ADD_TODO',
@@ -18,5 +20,19 @@ export const toggleTodo = id => {
   return {
     type: 'TOGGLE_TODO',
     id
+  }
+}
+
+export const increment = number => {
+  return {
+    type: 'INCREMENT',
+    number
+  }
+}
+
+export const decrement = number => {
+  return {
+    type: 'DECREMENT',
+    number
   }
 }

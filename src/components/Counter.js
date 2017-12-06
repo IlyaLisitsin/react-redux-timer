@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
+
+// Подумай что лишнее в onClick
 
 const Counter = ({ value, onIncrementClick, onDecrementClick }) => (
-    <div>
-        <h1>Here comes counter</h1>
-        <h2>Value: {value}</h2>
-        <button onClick={() => onIncrementClick()}>+</button>
-        <button onClick={() => onDecrementClick()}>-</button>
-    </div>
-)
+  <div>
+    <h1>Here comes counter</h1>
+    <h2>Value: {value}</h2>
+    <button onClick={() => onIncrementClick()}>+</button>
+    <button onClick={() => onDecrementClick()}>-</button>
+  </div>
+);
 
-export default Counter
+export default Counter;

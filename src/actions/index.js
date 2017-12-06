@@ -1,11 +1,6 @@
-export const increment = () => {
-  return {
-    type: 'INCREMENT',
-  }
-}
-
-export const decrement = () => {
-  return {
-    type: 'DECREMENT',
-  }
-}
+export const increment = () => ({ type: 'INCREMENT'})
+export const decrement = () => ({ type: 'DECREMENT'})
+export const start = () => ({ type: 'START' })
+export const tick = () => ({ type: 'TICK' })
+export const stop = () => ({ type: 'STOP' })
+export const clear = () => ({ type: 'CLEAR' })

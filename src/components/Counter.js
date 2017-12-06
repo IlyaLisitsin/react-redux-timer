@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-const Counter = ({ value, onIncrementClick }) => (
+const Counter = ({ value, onIncrementClick, onDecrementClick }) => (
     <div>
         <h1>Here comes counter</h1>
         <h2>Value: {value}</h2>
         <button onClick={() => onIncrementClick()}>+</button>
+        <button onClick={() => onDecrementClick()}>-</button>
     </div>
 )
 

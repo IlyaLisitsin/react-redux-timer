@@ -7,11 +7,11 @@ import CounterUse from '../containers/CounterAct'
 
 const App = () => (
   <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
-    <Counter />
-    {/*<CounterUse />*/}
+    {/*<AddTodo />*/}
+    {/*<VisibleTodoList />*/}
+    {/*<Footer />*/}
+    {/*<Counter />*/}
+    <CounterUse />
   </div>
 )
 

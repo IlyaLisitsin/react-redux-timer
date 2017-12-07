@@ -4,20 +4,21 @@ import React from "react"
 
 const Counter = ({ value, onIncrementClick, onDecrementClick }) => (
     <div>
-      <h1>Here comes counter</h1>
-      <h2>Value: {value}</h2>
-      <button onClick={onIncrementClick}>+</button>
-      <button onClick={onDecrementClick}>-</button>
+        <h2>Here comes the counter</h2>
+        <div>and it affects the timer(((</div>
+        <h3>Value: {value}</h3>
+        <button onClick={onIncrementClick}>+</button>
+        <button onClick={onDecrementClick}>-</button>
     </div>
 )
 
 export default connect(
     state => ({
-      value: state.countings
+        value: state.countings
     }),
     {
-      onIncrementClick: increment,
-      onDecrementClick: decrement
+        onIncrementClick: increment,
+        onDecrementClick: decrement
     }
 )(Counter);
 

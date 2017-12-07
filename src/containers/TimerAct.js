@@ -43,7 +43,7 @@ class Timer extends React.Component {
                 <button onClick={handleStart}>Start</button>
                 <button onClick={handleStop}>Stop</button>
                 <button onClick={handleClear}>Clear</button>
-                <div className={"timer"}>
+                <div>
                     <span>h: {res.h}</span>
                     <span>m: {res.m}</span>
                     <span>s: {res.s}</span>

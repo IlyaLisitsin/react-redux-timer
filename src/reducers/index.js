@@ -4,7 +4,7 @@ import tick from './tick'
 
 const appReducers = combineReducers({
   timering,
-  tick
+  tick,
 })
 
 export default appReducers;

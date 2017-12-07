@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux'
-import countings from './countings'
-import timering from './timering'
+import { combineReducers } from "redux";
+import countings from "./countings";
+import timering from "./timering";
 
 const appReducers = combineReducers({
   countings,
-  timering,
-})
+  timering
+});
 
-export default appReducers
+export default appReducers;

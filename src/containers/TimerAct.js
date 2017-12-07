@@ -1,30 +1,24 @@
 import { connect } from "react-redux";
 import { start, stop, clear } from "../actions/index";
-import Timer from "../components/Timer";
+import React from 'react'
 
-// Сократи максимально синтаксис как в CounterAct
-// Перенесеи сам Timer сюда
+const Timer = ({ms, handleStart, handleStop, handleClear}) => (
+    <div>
+        <h1>And here is the timer</h1>
+        <button onClick={handleStart}>Start</button>
+        <button onClick={handleStop}>Stop</button>
+        <button onClick={handleClear}>Clear</button>
+        <div>{ms}</div>
+    </div>
+)
 
-const mapStateToProps = state => {
-  return {
-    ms: state.timering
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    handleStart: () => {
-      dispatch(start());
-    },
-    handleStop: () => {
-      dispatch(stop());
-    },
-    handleClear: () => {
-      dispatch(clear());
+export default connect(
+    state => ({
+        ms: state.timering
+    }),
+    {
+        handleStart: start,
+        handleStop: stop,
+        handleClear: clear,
     }
-  };
-};
-
-const TimerUse = connect(mapStateToProps, mapDispatchToProps)(Timer);
-
-export default TimerUse;
+)(Timer)

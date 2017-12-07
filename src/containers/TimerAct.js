@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { start, stop, clear, startTick, stopTick } from "../actions/index";
+import { start, stop, clear } from "../actions/index";
 import React from 'react'
 
 class Timer extends React.Component {

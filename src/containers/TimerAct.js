@@ -3,10 +3,13 @@ import { start, stop, clear } from "../actions/index";
 import React from 'react'
 
 class Timer extends React.Component {
+    // Зачем тут конструктор
     constructor(props) {
         super(props)
     }
 
+
+    // Методы которые не обращаются к this или state лучше выносить как хелпер функцию за пределы класс
     msHandler = (ms) => {
         const res = { ms: 0, s: 0, h: 0, m: 0 }
         res.h = Math.floor(ms / 3600000)
@@ -17,6 +20,8 @@ class Timer extends React.Component {
         return res
     }
 
+    // Подумай что тут не так :) Ответ можешь написать в коммент или слак.
+    // Подсказка - проследи весь вызов функции и на что она в итоге влияет
     componentWillReceiveProps(nextProps) {
         this.msHandler(nextProps.ms)
     }
@@ -26,6 +31,11 @@ class Timer extends React.Component {
     }
 
     componentDidMount() {
+        // Ты вызываешь старт таймера при загрузка компонента, но не даешь эьто сделать в проверке выше,
+        //  тк this.props.stop по умоланию true
+        //  То есть метод постоянно диспатчится, но не проходит - JS нон стоп делает бесполезную работу
+        //  WHAAAAT?))
+        // Вообщем подумай как все реорганизовать без холостого интервала.
         setInterval(this.startTick, 1)
     }
 
